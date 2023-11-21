@@ -14,11 +14,18 @@ public class App {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         StudentDao sutdentDao = context.getBean("studentDaoImpl", StudentDao.class);
+//       Insert value
+//        Student student = new Student(103, "Tonmoy", "Barishal");
+//        int result = sutdentDao.insert(student);
+//        System.out.println("Number of insertion " + result);
 
-        Student student = new Student(103, "Tonmoy", "Barishal");
+//      Update value
+//        Student student = new Student(102, "Rashed", "Chittagong");
+//        int result = sutdentDao.update(student);
+//        System.out.println("Number of update " + result);
 
-        //Fire query
-        int result = sutdentDao.insert(student);
-        System.out.println("Number of insertion " + result);
+//      Delete value
+        int result = sutdentDao.delete(103);
+        System.out.println("Number of update " + result);
     }
 }
